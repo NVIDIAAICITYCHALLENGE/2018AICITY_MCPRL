@@ -4,7 +4,8 @@
 
 1. Prepare data. Put all your images (including vehicle and non_vehicle) in the `data/vehicle`. 
 The data used to train our VGGNet comes from the following sources: 
-    i) ImageNet (categories: car, truck, sign, road, snow and traffic light)
+
+    i)ImageNet (categories: car, truck, sign, road, snow and traffic light)
     ii) UIUC Car Detection 
     iii) GTI dataset 
     iv) Cars Dataset 
