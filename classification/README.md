@@ -17,3 +17,7 @@ Put all your images (including vehicle and non_vehicle) in the `data/vehicle`. T
 For vehicle images, we crop the bounding boxes if provided and randomly crop 80\% of the original size during training. For non-vehicle images, we make a crop of random size (10%, 30%, 50%, 100%) of the original size during training. All training images are resized to 64x64 and are rotated a certain degree randomly chosen from (-10, 10).
 
 ### 2.Get train.txt and test.txt
+Run ```python GetTxt.py```. Then, you will get `train.txt' and 'test.txt` separately, which are used during training.
+
+### 3.Train Model
+Our network structures are saved in `models.py`. You can change the model used in `train.py`. Run ```python train.py```, you will find your model in './logs'.
