@@ -6,6 +6,10 @@
 The data used to train our VGGNet comes from the following sources: 
 
     i)ImageNet (categories: car, truck, sign, road, snow and traffic light)
+    ii) UIUC Car Detection
+    iii) GTI dataset
+
+    i)ImageNet (categories: car, truck, sign, road, snow and traffic light)
     ii) UIUC Car Detection 
     iii) GTI dataset 
     iv) Cars Dataset 
