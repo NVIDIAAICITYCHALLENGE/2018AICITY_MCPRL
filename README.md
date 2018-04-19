@@ -18,12 +18,10 @@ based on the bounding boxes produced by the former module. When meeting camera m
 * PIL
 
 ## Code structure
+
 The `./classification` contains the code to train classification model.
-
 The `./similar` contains the code to train similarity comparison model.
-
 The `./data` is the directory to save all images and models used in our work.
-
 The `./py-faster-rcnn` contains all the scripts for detecting, classifiying, decision making, etc.
 
 More details can be found in corresponding subfolders.
