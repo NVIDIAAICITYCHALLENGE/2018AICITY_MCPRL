@@ -2,7 +2,7 @@
 import os, random
 #make the image list for training and testing
 
-rt = '../../data/vehicle/new_vehicle_3'
+rt = '../../data/vehicle/'
 choises = ['vehicle', 'non_v']
 v_folder = os.listdir(os.path.join(rt, choises[0]))
 n_folder = os.listdir(os.path.join(rt, choises[1]))
