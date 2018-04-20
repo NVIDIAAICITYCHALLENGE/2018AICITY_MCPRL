@@ -19,9 +19,9 @@ based on the bounding boxes produced by the former module. When meeting camera m
 
 ## Code structure
 
-1. Run `python ./extract_background.py`. Then, you will get all original frames and background frames save in `./data/all_imgs/all` and `./data/all_imgs/bg` separately
-2. The `./classification` contains the code to train classification model.
-3. The `./similar` contains the code to train similarity comparison model.
+1. Run `python ./extract_background.py`. Then, you will get all original frames and background frames save in `./data/all_imgs/all` and `./data/all_imgs/bg` separately, which are both used in following modules.
+2. The `./classification` contains the code to train classification model. You can also download our model rather than train it yourself.
+3. The `./similar` contains the code to train similarity comparison model. You can also download our model rather than train it yourself.
 4. The `./data` is the directory to save all images and models used in our work. [This](https://drive.google.com/open?id=1K18W1Zoj3hQI7BiQLqs-g-Ay6CKiMDbS) is some of our data for classification and the source other data are illustruted [here](./classification). [Here](./data/models) you can download all models used by us.
 5. The `./py-faster-rcnn` contains all the scripts for detecting, classifiying, decision making, etc.
 
