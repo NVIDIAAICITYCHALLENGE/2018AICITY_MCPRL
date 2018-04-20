@@ -36,7 +36,7 @@ class extract_model(nn.Module):
 class GetSimilar():
     def __init__(self):
         model=extract_model()
-        model.load_state_dict(torch.load('./../../data/trip_res50_34999_batch_all.pkl',map_location={'cuda:1':'cuda:0'}))
+        model.load_state_dict(torch.load('./../../data/models/trip_res50_34999_batch_all.pkl',map_location={'cuda:1':'cuda:0'}))
         model.eval()
         model=model.cuda()
         self.net = model
@@ -55,7 +55,9 @@ class GetSimilar():
         return np.linalg.norm(result1-result2)
 
 
+
 if __name__=='__main__':
+    '''test the class'''
     with open('pipei1.txt','r') as f1:
         lines = f1.readlines()
     with open('pipei2.txt','r') as f2:
@@ -65,13 +67,13 @@ if __name__=='__main__':
             continue
         box1 = lines[i].strip('\n').split(' ')
         box2 = lines2[i].strip('\n').split(' ')
-        img1 = cv2.imread('/home/sedlight/workspace/wei/data/CITYCHANLLENGE/all_imgs/bg/' + box1[0])
-        img2 = cv2.imread('/home/sedlight/workspace/wei/data/CITYCHANLLENGE/all_imgs/bg/' + box2[0])
+        img1 = cv2.imread('./../../data/all_imgs/bg/' + box1[0])
+        img2 = cv2.imread('./../../data/all_imgs/bg/' + box2[0])
         img1 = img1[int(float(box1[2])):int(float(box1[4])),int(float(box1[1])):int(float(box1[3]))]
         img2 = img2[int(float(box2[2])):int(float(box2[4])),int(float(box2[1])):int(float(box2[3]))]
         Compare = GetSimilar()
         c = Compare.similar(img1, img2)
         #if c < 0.6:
         print 'true'
-        cv2.imwrite('/home/sedlight/workspace/zjf/py-faster-rcnn/nvidia/data/out_img/test_sim/58/' + str(i) +'_'+str(c) + '_1'  + '.jpg',img1)
-        cv2.imwrite('/home/sedlight/workspace/zjf/py-faster-rcnn/nvidia/data/out_img/test_sim/58/' + str(i) + '_' + str(c) + '_2.jpg',img2)
+        cv2.imwrite('./../' + str(i) +'_'+str(c) + '_1'  + '.jpg',img1)
+        cv2.imwrite('./../' + str(i) + '_' + str(c) + '_2.jpg',img2)

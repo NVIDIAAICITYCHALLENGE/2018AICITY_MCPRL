@@ -194,6 +194,10 @@ if __name__ == '__main__':
     #set the path, save_path will save the result iamges, image_path save the input data
     save_path = os.path.join('../out/')
     image_path = os.path.join('../data/track2-bg-imgs/')
+    if not os.path.exists(save_path):
+        os.mkdir(save_path)
+    if not os.path.exists(save_path):
+        os.mkdir(image_path)
     #get the model
     car_det = faster(save_path,image_path,2)
     #set gpu

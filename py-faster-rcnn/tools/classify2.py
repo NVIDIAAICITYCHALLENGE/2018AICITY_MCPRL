@@ -9,9 +9,9 @@ from PIL import Image
 import cv2
 
 #the model path
-root = './../../data/'
+root = './../../data/models'
 experiment_name = 'vgg16'
-extra_name = 'extra_data_8_2'
+extra_name = 'extra_data_8'
 model_name = 'model_25000.tar'
 img_path = './1.jpg'
 vehicle = [(631, 77), (655, 97)]
