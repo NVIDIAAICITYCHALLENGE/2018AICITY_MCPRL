@@ -12,12 +12,16 @@ As shown in the picture, we get the background frames from the original frames. 
 based on the bounding boxes produced by the former module. When meeting camera movement or vehicles waiting for red lights, we will compare the similarity between two candidates with the help of ResNet50 trained with triplet loss. For every detected abnormal vehicles, we go back to find the accurate timestamp when the abnormal happens. More details can be found in our paper.
 
 ## Dependencies
+* Python2
 * Caffe 
 * pytorch
 * cv2
 * PIL
+* Numpy
 
 ## Code structure
+
+Because it takes a lone time to run our system on the entire evaluation dataset, which contains about 1500 minuntes video in total, we split and run our system in three part. What's more, it makes debugging easier. First, we generate the background frames. Next, we detecte vechiles using faster-rcnn in multi-scale, which is follower by a VGG16 classifier. At last, we obtain all anomalies according to saved bounding boxes. If you want, you can also run the whole system end-to-end, but you have to combine the code together. When meeting some trouble, you should feel free to [contact](#Contact) me
 
 1. Run `python ./extract_background.py`. Then, you will get all original frames and background frames saved in `./data/all_imgs/all` and `./data/all_imgs/bg` separately, which are both used in the following modules.
 2. The `./classification` contains the code to train classification model. You can also download our model rather than train it yourself.
