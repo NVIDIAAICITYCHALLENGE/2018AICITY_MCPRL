@@ -17,4 +17,4 @@ This directory is modified from [py-faster-rcnn](https://github.com/rbgirshick/p
  * `data` is the folder to save our detection model.
  * `model` is where to save `prototxt` for training and testing.
  * `nvidia` is where to save "txt" for training. It may be useless for you.
- * `tools` is the main directory for our system, and almost all useful scripts are saved here. `car_faster.py` is for detecting vehicles. Also, `similar.py` and `classify.py` are for similar comparison and classifying separately and called in `car_faster.py`.Using  `accident_time.py`, accurate timestamp of an anomaly can be obtained according to bounding boxes.
+ * `tools` is the main directory for our system, and almost all useful scripts are saved here. `car_faster.py` is for detecting vehicles. Also, `similar.py` and `classify.py` are for similar comparison and classifying separately and called in `car_faster.py`. Using `accident_time.py`, accurate timestamp of an anomaly can be obtained according to bounding boxes.
