@@ -1,7 +1,7 @@
 # Detecting and Decision Making
 
 ## Introduction
-This directory is modified from [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn). 
+This directory is modified from [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn). We use the trained similarity-comparison and classify model directly here. If you want to know more detail about these two model, you should find it out at `root` directory.
 
 ## How it works
 
